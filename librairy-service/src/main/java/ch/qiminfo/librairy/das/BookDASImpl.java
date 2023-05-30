@@ -57,6 +57,7 @@ public class BookDASImpl implements BookDAS {
 
     @Override
     public List<BookBean> search(BookRequest bookRequest) {
+        System.out.println("Hello");
         SelectConditionStep<Record> selectConditionStep = this.dsl.select()
                 .from(BOOK)
                 .leftJoin(AUTHOR_BOOK).onKey()
